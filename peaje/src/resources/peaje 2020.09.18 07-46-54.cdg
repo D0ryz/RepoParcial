@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="peaje">
+  <ClassDiagramComponents>
+    <Class name="Principal" package="udem.edu.co.peaje" visibility="public" xPosition="25.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Automovil" package="udem.edu.co.peaje.vehiculos" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="VALOR_PEAJE" type="int" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="tipoCarroceria" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tipoCarroceria"/>
+          <Argument type="String" name="placa"/>
+          <Argument type="String" name="marca"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTipoCarroceria" returnType="String" visibility="public"/>
+        <Method name="setTipoCarroceria" returnType="void" visibility="public">
+          <Argument type="String" name="tipoCarrocerÃ­a"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Camion" package="udem.edu.co.peaje.vehiculos" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="VALOR_PEAJE" type="int" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="numeroEjes" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numeroEjes"/>
+          <Argument type="String" name="placa"/>
+          <Argument type="String" name="marca"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumeroEjes" returnType="String" visibility="public"/>
+        <Method name="setNumeroEjes" returnType="void" visibility="public">
+          <Argument type="String" name="numeroEjes"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Moto" package="udem.edu.co.peaje.vehiculos" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="VALOR_PEAJE" type="int" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="cilindraje" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="cilindraje"/>
+          <Argument type="String" name="placa"/>
+          <Argument type="String" name="marca"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCilindraje" returnType="int" visibility="public"/>
+        <Method name="setCilindraje" returnType="void" visibility="public">
+          <Argument type="int" name="cilindraje"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Vehiculo" package="udem.eu.co.peaje.vehiculos.abstracto" visibility="public" isAbstract="true" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="placa" type="String" visibility="private"/>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="valorPeaje" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="placa"/>
+          <Argument type="String" name="marca"/>
+          <Argument type="int" name="valorPeaje"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPlaca" returnType="String" visibility="public"/>
+        <Method name="setPlaca" returnType="void" visibility="public">
+          <Argument type="String" name="placa"/>
+        </Method>
+        <Method name="getMarca" returnType="String" visibility="public"/>
+        <Method name="setMarca" returnType="void" visibility="public">
+          <Argument type="String" name="marca"/>
+        </Method>
+        <Method name="getValorPeaje" returnType="int" visibility="public"/>
+        <Method name="setValorPeaje" returnType="void" visibility="public">
+          <Argument type="int" name="valorPeaje"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="udem.edu.co.peaje.vehiculos.Moto" target="udem.eu.co.peaje.vehiculos.abstracto.Vehiculo"/>
+    <IsRelation name="is" source="udem.edu.co.peaje.vehiculos.Camion" target="udem.eu.co.peaje.vehiculos.abstracto.Vehiculo"/>
+    <IsRelation name="is" source="udem.edu.co.peaje.vehiculos.Automovil" target="udem.eu.co.peaje.vehiculos.abstracto.Vehiculo"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

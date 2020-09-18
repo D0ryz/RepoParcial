@@ -1,0 +1,11 @@
+{
+    "vehiculos":[{
+            "moto":[{
+            "cilindraje":"390",
+            "placa":"GHJ-75A",
+            "marca":"KTM",
+            "valorPeaje":"5000"
+        }]
+    }]
+}
+        

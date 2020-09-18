@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+    <vehiculo>
+        <moto>
+            <cilindraje>$cilindraje</cilindraje>
+            <placa>$placa</placa>
+            <marca>$marca</marca>
+            <valorPeaje>$valorPeaje</valorPeaje>
+        </moto>
+    </vehiculo>
+cilindraje, String placa, String marca
